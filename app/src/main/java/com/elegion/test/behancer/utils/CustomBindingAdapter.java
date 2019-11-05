@@ -7,6 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 
 import com.elegion.test.behancer.data.model.project.Project;
+import com.elegion.test.behancer.data.model.user.User;
+//import com.elegion.test.behancer.ui.profile.Binding;
 import com.elegion.test.behancer.ui.projects.ProjectsAdapter;
 import com.squareup.picasso.Picasso;
 
@@ -35,4 +37,10 @@ public class CustomBindingAdapter {
         layout.post(() -> layout.setRefreshing(isLoading));
     }
 
+
+//    @BindingAdapter({"bind:profile_data"})
+//    public static void configureProfile(User user) {
+//        Binding binding = new Binding(user);
+//
+//    }
 }

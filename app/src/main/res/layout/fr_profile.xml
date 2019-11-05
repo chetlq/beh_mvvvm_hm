@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="ProfileBinding">
+
+        <import
+            alias="V"
+            type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="com.elegion.test.behancer.ui.profile.ProfileViewModel" />
+
+    </data>
+
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <include
         layout="@layout/v_profile"
-        android:visibility="gone" />
+        app:profile='@{vm.binding}'
 
-    <include
-        layout="@layout/v_error"
-        android:visibility="gone" />
+
+        />
+
+<!--    <include-->
+<!--        layout="@layout/v_error"-->
+<!--        android:visibility="@{vm.isErrorVisible ? V.VISIBLE : V.GONE}" />-->
 
 </LinearLayout>
+
+</layout>

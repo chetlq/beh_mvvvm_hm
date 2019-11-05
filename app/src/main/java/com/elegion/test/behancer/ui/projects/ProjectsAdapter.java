@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.elegion.test.behancer.data.model.project.Project;
 import com.elegion.test.behancer.databinding.ProjectBinding;
@@ -37,6 +38,7 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsHolder> {
     public void onBindViewHolder(@NonNull ProjectsHolder holder, int position) {
         Project project = mProjects.get(position);
         holder.bind(project, mOnItemClickListener);
+
     }
 
     @Override

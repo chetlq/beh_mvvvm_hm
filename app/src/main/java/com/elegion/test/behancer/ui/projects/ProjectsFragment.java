@@ -48,6 +48,7 @@ public class ProjectsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ProjectsBinding binding =  ProjectsBinding.inflate(inflater, container, false);
+
         binding.setVm(mProjectsViewModel);
         return binding.getRoot();
     }
